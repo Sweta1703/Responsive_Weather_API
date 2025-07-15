@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Weather App</h1>
+        </header>
+        
+        <main>
+            <div class="search-section">
+                <div class="input-group">
+                    <input type="text" id="locationInput" placeholder="Enter city name...">
+                    <button id="searchBtn">Search</button>
+                </div>
+                <button id="currentLocationBtn">Use Current Location</button>
+            </div>
+
+            <div id="loadingSpinner" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <div id="errorMessage" class="error hidden">
+                <p></p>
+            </div>
+
+            <div id="weatherDisplay" class="weather-display hidden">
+                <div class="weather-header">
+                    <h2 id="cityName"></h2>
+                    <p id="currentDate"></p>
+                </div>
+
+                <div class="weather-main">
+                    <div class="temperature-section">
+                       <div id="weatherIcon" class="weather-icon">🌤️</div>  
+                        <div class="temperature">
+                            <span id="currentTemp"></span>
+                            <span class="unit">°C</span>
+                        </div>
+                    </div>
+                    <div class="weather-description">
+                        <p id="weatherDesc"></p>
+                        <p id="feelsLike"></p>
+                    </div>
+                </div>
+
+                <div class="weather-details">
+                    <div class="detail-item">
+                        <span class="label">Humidity</span>
+                        <span id="humidity"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Wind Speed</span>
+                        <span id="windSpeed"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Pressure</span>
+                        <span id="pressure"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Visibility</span>
+                        <span id="visibility"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">UV Index</span>
+                        <span id="uvIndex"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Sunrise</span>
+                        <span id="sunrise"></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="label">Sunset</span>
+                        <span id="sunset"></span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Weather data provided by OpenWeatherMap API</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="app1.js"></script>
+</body>
+</html>
